@@ -155,9 +155,7 @@ function App() {
           )}
           {showResult && Number.isFinite(hoursPerDay) && (
             <p className="success">
-              {daysLeft === 0
-                ? `${hoursPerDay.toFixed(2)} hrs today to hit ${goal} — deadline is ${formatDeadlineLabel(deadlineDate)}.`
-                : `~${hoursPerDay.toFixed(2)} hrs/day to hit ${goal} by ${formatDeadlineLabel(deadlineDate)}.`}
+              {hoursPerDay.toFixed(2)} hrs/day to hit {goal} by {formatDeadlineLabel(deadlineDate)}
             </p>
           )}
         </div>
