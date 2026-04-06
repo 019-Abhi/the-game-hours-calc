@@ -149,6 +149,17 @@ function App() {
           </div>
         </div>
 
+        <div className="feedback">
+          {errorMsg !== '' && (
+            <p className="warning">{errorMsg}</p>
+          )}
+          {showResult && Number.isFinite(hoursPerDay) && (
+            <p className="success">
+              {hoursPerDay.toFixed(2)} hrs/day to hit {goal} by {formatDeadlineLabel(deadlineDate)}
+            </p>
+          )}
+        </div>
+
       </div>
     </main>
   )
