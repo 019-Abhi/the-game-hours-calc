@@ -81,53 +81,57 @@ function App() {
 
   return (
     <main className="page">
-      <div className="calculator-card">
+      <div className="bg-image"></div>
 
-        <div className="title-wrap">
-          <h1 align="center">Calculate your hours needed for HCTG</h1>
-          <br />
+        <div className="vl"></div>
+
+        <div className="calculator-card">
+
+          <div className="title-wrap">
+            <h1 align="center">Calculate your hours needed for HCTG</h1>
+          </div>
+
+          <div className="input-grid">
+            <label className="field field-full">
+              <span>Deadline</span>
+              <input type="date"value={deadlineDate} min="2026-01-01" max="2026-12-31"
+                onChange={(e) => {
+                  setDeadlineDate(e.target.value)
+                  setShowResult(false)
+                }}
+              />
+            </label>
+
+            <label className="field">
+              <span>Hours so far</span>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="40"
+                value={completedHours}
+                onChange={(e) => setCompletedHours(e.target.value)}
+              />
+            </label>
+
+            <label className="field">
+              <span>Target total</span>
+              <input
+                type="number"
+                min="0"
+                step="0.1"
+                placeholder="150"
+                value={goalHours}
+                onChange={(e) => setGoalHours(e.target.value)}
+              />
+            </label>
+
+            <button className="calculate-btn" onClick={CalculateDaysLeft}>
+              Calculate
+            </button>
+          </div>
+
         </div>
-
-        <div className="input-grid">
-          <label className="field field-full">
-            <span>Deadline</span>
-            <input type="date"value={deadlineDate} min="2026-01-01" max="2026-12-31"
-              onChange={(e) => {
-                setDeadlineDate(e.target.value)
-                setShowResult(false)
-              }}
-            />
-          </label>
-
-          <label className="field">
-            <span>Hours so far</span>
-            <input
-              type="number"
-              min="0"
-              step="0.1"
-              placeholder="40"
-              value={completedHours}
-              onChange={(e) => setCompletedHours(e.target.value)}
-            />
-          </label>
-
-          <label className="field">
-            <span>Target total</span>
-            <input
-              type="number"
-              min="0"
-              step="0.1"
-              placeholder="150"
-              value={goalHours}
-              onChange={(e) => setGoalHours(e.target.value)}
-            />
-          </label>
-
-          <button className="calculate-btn" onClick={CalculateDaysLeft}>
-            Calculate
-          </button>
-        </div>
-
         <div className="results">
           <div className="result-tile">
             <p className="tile-label">Days left</p>
@@ -139,7 +143,7 @@ function App() {
             <p className="tile-label">Hours left</p>
             <p className="tile-value">{showResult ? hoursLeft.toFixed(1) : '--'}</p>
           </div>
-          <div className="result-tile highlight">
+          <div className="result-tile">
             <p className="tile-label">Hours/Day</p>
             <p className="tile-value">
               {showResult && Number.isFinite(hoursPerDay)
@@ -148,8 +152,6 @@ function App() {
             </p>
           </div>
         </div>
-
-      </div>
     </main>
   )
 } 

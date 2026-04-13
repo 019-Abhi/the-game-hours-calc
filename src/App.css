@@ -6,20 +6,44 @@
   justify-content: center;
 }
 
+.bg-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("src/assets/digital-painting-old-clock.jpg");
+  background-repeat: no-repeat;
+  background-size: 100%; 
+  opacity: 0.4;
+}
+
+.vl {
+  position: absolute;
+  left: 40%;
+  top: 20%;
+  border-left: 7px solid #846a23; 
+  border-radius: 8px;
+  height: 50%;   
+  opacity: 0.8;              
+}
+
 .calculator-card {
-  width: 100%;  
-  max-width: 700px;
-  padding: 40px;
+  left: 3%;
+  top:20%;
+  position: absolute;
+  width: 35%;  
+  height: 50%;
+  padding: 40px;  
   border-radius: 20px;
-  background: rgba(223, 224, 228, 0.85);
   border: 2px solid rgba(147, 143, 143, 0.5);
   box-shadow: 0 20px 50px rgba(13, 20, 33, 0.15);
+  background-color: #bbb4a0; 
+  opacity: 0.9;
 }
 
 .title-wrap {
   margin-bottom: 30px;
-}
-
+  color: #344059;
+}  
 h1 {
   margin: 0;
   font-size: 1.75rem;
@@ -44,7 +68,7 @@ h1 {
 
 .field span {
   font-weight: 600;
-  color: #111827;
+  color: #344059;
 }
 
 .field input {
@@ -53,6 +77,7 @@ h1 {
   border: 2px solid #d1d5db;
   border-radius: 10px;
   background: #fff;
+  color: #344059;
 }
 
 .field input:focus {
@@ -71,7 +96,7 @@ h1 {
   border: none;
   border-radius: 10px;
   cursor: pointer;
-  background: linear-gradient(135deg, #8faae4, #554992);
+  background: linear-gradient(135deg, #6e7d9d, #a1ac5f);
 }
 
 .calculate-btn:hover {
@@ -79,27 +104,35 @@ h1 {
 }
 
 .results {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 14px;
+  position: absolute;
+  width: 65%; 
+  height: 18%;
   margin-top: 24px;
+  bottom: 0;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
 }
 
 .result-tile {
   padding: 16px;
-  background: #f9fafb;
-  border: 1px solid #e5e7eb;
-  border-radius: 14px;
+  background-color: #eae9e2; 
+  border: 2px solid rgba(147, 143, 143, 0.5);
+  box-shadow: 0 20px 50px rgba(13, 20, 33, 0.15);  border-radius: 20px;
   overflow: scroll;
+  height: 80%;
+  width: 25%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;    
+  justify-content: center;
 }
 
 .result-tile::-webkit-scrollbar {
   display: none;
-}
-
-.result-tile.highlight {
-  background: #eff6ff;
-  border-color: #bfdbfe;
 }
 
 .tile-label {
