@@ -6,56 +6,6 @@
   justify-content: center;
 }
 
-.bg-image {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url("/digital-painting-old-clock.jpg");
-  background-repeat: no-repeat;
-  background-size: 100%; 
-  opacity: 0.4;
-}
-
-.vl {
-  position: absolute;
-  left: 40%;
-  top: 20%;
-  border-left: 7px solid #846a23; 
-  border-radius: 8px;
-  height: 50%;   
-  opacity: 0.8;              
-}
-
-.calculator-card {
-  left: 3%;
-  top:20%;
-  position: absolute;
-  width: 35%;  
-  height: 50%;
-  padding: 40px;  
-  border-radius: 20px;
-  border: 2px solid rgba(147, 143, 143, 0.5);
-  box-shadow: 0 20px 50px rgba(13, 20, 33, 0.15);
-  background-color: #bbb4a0; 
-  opacity: 0.9;
-}
-
-.title-wrap {
-  margin-bottom: 30px;
-  color: #344059;
-}  
-h1 {
-  margin: 0;
-  font-size: 1.75rem;
-}
-
-.input-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
-  align-items: end;
-}
-
 .field {
   display: flex;
   flex-direction: column;
@@ -66,27 +16,14 @@ h1 {
   grid-column: span 2;
 }
 
-.field span {
-  font-weight: 600;
-  color: #344059;
-}
-
 .field input {
   padding: 12px 14px;
   font-size: 16px;
   border: 2px solid #d1d5db;
-  border-radius: 10px;
   background: #fff;
-  color: #344059;
-}
-
-.field input:focus {
-  outline: none;
-  border-color: #afafb8;
 }
 
 .calculate-btn {
-  grid-column: span 2;
   padding: 14px 16px;
   font-size: 16px;
   margin-top: 10px;
@@ -94,13 +31,7 @@ h1 {
   font-weight: 700;
   color: #fff;
   border: none;
-  border-radius: 10px;
-  cursor: pointer;
-  background: linear-gradient(135deg, #6e7d9d, #a1ac5f);
-}
-
-.calculate-btn:hover {
-  opacity: 0.95;
+  background: black
 }
 
 .results {
@@ -114,21 +45,6 @@ h1 {
   display: flex;
   flex-direction: row;
   gap: 40px;
-}
-
-.result-tile {
-  padding: 16px;
-  background-color: #eae9e2; 
-  border: 2px solid rgba(147, 143, 143, 0.5);
-  box-shadow: 0 20px 50px rgba(13, 20, 33, 0.15);  border-radius: 20px;
-  overflow: scroll;
-  height: 80%;
-  width: 25%;
-  margin-bottom: 40px;
-  display: flex;
-  flex-direction: column; 
-  align-items: center;    
-  justify-content: center;
 }
 
 .result-tile::-webkit-scrollbar {
@@ -147,20 +63,4 @@ h1 {
   font-size: 28px;
   font-weight: 800;
   color: #111827;
-}
-
-@media (max-width: 700px) {
-  .calculator-card {
-    padding: 20px;
-  }
-
-  .input-grid,
-  .results {
-    grid-template-columns: 1fr;
-  }
-
-  .calculate-btn,
-  .field-full {
-    grid-column: span 1;
-  }
 }
