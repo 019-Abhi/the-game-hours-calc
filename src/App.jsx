@@ -107,7 +107,6 @@ function App() {
               <input
                 type="number"
                 min="0"
-                step="0.1"
                 placeholder="40"
                 value={completedHours}
                 onChange={(e) => setCompletedHours(e.target.value)}
@@ -119,7 +118,6 @@ function App() {
               <input
                 type="number"
                 min="0"
-                step="0.1"
                 placeholder="150"
                 value={goalHours}
                 onChange={(e) => setGoalHours(e.target.value)}
